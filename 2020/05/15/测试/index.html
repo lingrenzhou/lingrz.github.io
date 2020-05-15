@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="测试"/>
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/blog/default" title="Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="https://lingrz.github.io/blog/2020/05/15/测试/"/>
+
+
+<meta name="description" content="一、创建script.vbs脚本文件脚本内容如下： 12set ws&#x3D;WScript.CreateObject(&quot;WScript.Shell&quot;) ws.Run &quot;F:&#x2F;event.bat &#x2F;start&quot;,0   event.bat内容及目录 12@echo offjava -jar F:&#x2F;event-cloud-api">
+<meta property="og:type" content="article">
+<meta property="og:title" content="测试">
+<meta property="og:url" content="https://lingrz.github.io/blog/2020/05/15/%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、创建script.vbs脚本文件脚本内容如下： 12set ws&#x3D;WScript.CreateObject(&quot;WScript.Shell&quot;) ws.Run &quot;F:&#x2F;event.bat &#x2F;start&quot;,0   event.bat内容及目录 12@echo offjava -jar F:&#x2F;event-cloud-api">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-15T08:17:41.000Z">
+<meta property="article:modified_time" content="2020-05-15T08:19:23.301Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="stylesheet" type="text/css" href="/blog/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> 测试 - Hexo </title>
+  <meta name="generator" content="Hexo 4.2.1"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/blog/." class="logo">Hexo</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/blog/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/blog/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          测试
+        
+      </h1>
+
+      <time class="post-time">
+          May 15 2020
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h2 id="一、创建script-vbs脚本文件"><a href="#一、创建script-vbs脚本文件" class="headerlink" title="一、创建script.vbs脚本文件"></a>一、创建script.vbs脚本文件</h2><p>脚本内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set ws&#x3D;WScript.CreateObject(&quot;WScript.Shell&quot;) </span><br><span class="line">ws.Run &quot;F:&#x2F;event.bat &#x2F;start&quot;,0</span><br></pre></td></tr></table></figure>
+
+<p> event.bat内容及目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">java -jar F:&#x2F;event-cloud-api-1.0-SNAPSHOT.jar --spring.profiles.active&#x3D;prod --server.port&#x3D;8021</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="二、脚本存放位置"><a href="#二、脚本存放位置" class="headerlink" title="二、脚本存放位置"></a>二、脚本存放位置</h2><p>打开运行对话框（win键+R），输入命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell:startup</span><br></pre></td></tr></table></figure>
+
+
+<p> 此时会直接弹出启动项对应的目录（C:\Users\zhang\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup），将script.vbs脚本复制粘贴到该目录下</p>
+<h2 id="三、查看结果"><a href="#三、查看结果" class="headerlink" title="三、查看结果"></a>三、查看结果</h2><p>重启电脑后，打开浏览器，输入请求链接：<a href="http://localhost:8021/" target="_blank" rel="noopener">http://localhost:8021/</a></p>
+<p>到此设置开机启动bat成功 </p>
+<h2 id="四、直接后台启动"><a href="#四、直接后台启动" class="headerlink" title="四、直接后台启动"></a>四、直接后台启动</h2><ol>
+<li>创建event-background .bat文件，内容为：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">	%1 mshta vbscript:CreateObject(&quot;WScript.Shell&quot;).Run(&quot;%~s0 ::&quot;,0,FALSE)(window.close)&amp;&amp;exit</span><br><span class="line">java -jar F:&#x2F;event-cloud-api-1.0-SNAPSHOT.jar --spring.profiles.active&#x3D;prod --server.port&#x3D;8022</span><br></pre></td></tr></table></figure>
+
+
+<ol start="2">
+<li><p>直接双击运行event-background .bat程序</p>
+</li>
+<li><p>查看后台启动是否成功，打开浏览器，输入请求链接：<a href="http://localhost:8022/" target="_blank" rel="noopener">http://localhost:8022/</a></p>
+</li>
+</ol>
+<p>到此bat直接后台启动成功</p>
+<h2 id="五、根据端口号杀掉进程"><a href="#五、根据端口号杀掉进程" class="headerlink" title="五、根据端口号杀掉进程"></a>五、根据端口号杀掉进程</h2><p>（又有点晕了，刚开始测试还行，现在又不行了）</p>
+<pre><code>  @echo off
+netstat -aon |findstr 8021&gt;pid_log.txt
+     for /f &quot;delims=&quot; %%a in (pid.txt) do (for /f &quot;tokens=1* delims=:&quot; %%i in (&apos;call echo %%a^|find /i &quot;TCP&quot;&apos;) do (
+      echo %%a
+    )  
+)</code></pre><p>rem 读取文件中内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set &#x2F;P OEM&#x3D;&lt;pid_log.txt</span><br></pre></td></tr></table></figure>
+
+<p>rem 截取文件中的字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo  %OEM:~71,76%</span><br><span class="line">taskkill &#x2F;f &#x2F;pid %OEM:~71,76%</span><br></pre></td></tr></table></figure>
+
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/blog/2020/05/15/hello-world/">
+        <span class="next-text nav-default">Hello World</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2020
+    <span class="footer-author">John Doe.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear" target="_blank" rel="noopener">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/blog/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/blog/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/blog/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
